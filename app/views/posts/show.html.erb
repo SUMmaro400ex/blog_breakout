@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<%= link_to "Back", posts_path %>
+<h1>Comments for the post</h1>
+
+<% @comments.each do |comment| %>
+  <h3><%= comment.body %></h3>
+<% end %>
+
+<%= render 'comments/form' %>
