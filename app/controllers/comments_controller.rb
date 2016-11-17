@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html {redirect_to posts_path}
+        format.json { render json: @comment }
       else
         format.html {render :new}
       end

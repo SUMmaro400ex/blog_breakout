@@ -1,4 +1,8 @@
 <h1>Here are all the Posts</h1>
+
+
+<%= link_to "NEW POST", new_post_path %>
+
 <% @posts.each do |post| %>
   <%= link_to(post.title, post) %>
   <h3><%= post.body %></h3>
